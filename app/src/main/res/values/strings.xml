@@ -4,7 +4,7 @@
     <string name="text_password">Password</string>
     <string name="all_category">All</string>
     <string name="computing_category">Computing</string>
-    <string name="home_appliances_category">Electrodomésticos</string>
+    <string name="home_appliances_category">Home Appliances</string>
     <string name="technology_category">Technology</string>
     <string name="tools_category">Tools</string>
 </resources>
