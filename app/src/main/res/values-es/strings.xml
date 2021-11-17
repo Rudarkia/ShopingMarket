@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ShopingMarket</string>
+    <string name="text_search">Buscar</string>
+    <string name="text_password">Contraseña</string>
+    <string name="all_category">Todo</string>
+    <string name="computing_category">Computacion</string>
+    <string name="home_appliances_category">Electrodomésticos</string>
+    <string name="technology_category">Tecnología</string>
+    <string name="tools_category">Herramientas</string>
+</resources>
