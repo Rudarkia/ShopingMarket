@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-import kotlin.concurrent.thread
+//import kotlin.concurrent.thread
 
 class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,6 +13,8 @@ class HomeActivity : AppCompatActivity() {
         setTheme(R.style.Theme_ShopingMarket)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
+        val myToast = Toast.makeText(this, R.string.noLogin, Toast.LENGTH_LONG)
+        myToast.show()
     }
 
     fun logOn(botonLogin: View) {
@@ -22,8 +24,8 @@ class HomeActivity : AppCompatActivity() {
 
     fun showToast(int: Int){
         when (int){
-            1 ->Toast.makeText(applicationContext,"@noLogin",Toast.LENGTH_LONG).show()
-            2 ->Toast.makeText(applicationContext,"Gracias pedaso de animal",Toast.LENGTH_LONG).show()
+            1 ->Toast.makeText(applicationContext,R.string.noLogin,Toast.LENGTH_LONG).show()
+            2 ->Toast.makeText(applicationContext,"!Gracias pedaso de animal",Toast.LENGTH_LONG).show()
 
         }
 
