@@ -1,7 +1,12 @@
 <resources>
     <string name="app_name">Shopping Market</string>
     <string name="text_search">Buscar</string>
+    <string name="text_user">Usuario o Correo</string>
     <string name="text_password">Contraseña</string>
+    <string name="forget_string">Olvido su contrasenia</string>
+    <string name="text_mobile">Cell</string>
+    <string name="log_btn">Ingresar</string>
+    <string name="Sign_btn">Registrar</string>
     <string name="all_category">Todo</string>
     <string name="computing_category">Computacion</string>
     <string name="home_appliances_category">Electrodomésticos</string>
