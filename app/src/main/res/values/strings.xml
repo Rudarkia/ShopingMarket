@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ShopingMarket</string>
+    <string name="app_name">Shopping Market</string>
     <string name="text_search">Search</string>
     <string name="text_password">Password</string>
     <string name="all_category">All</string>
