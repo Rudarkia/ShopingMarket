@@ -10,4 +10,5 @@
     <color name="color_1">#FFBFBFBF</color>
     <color name="bt_color_1">#EDB712</color>
     <color name="text_bg_1">#38393A</color>
+    <color name="color_bg">#EC9A0E</color>
 </resources>
