@@ -56,6 +56,7 @@
         app:layout_constraintHorizontal_bias=".5"/>
 
     <TextView
+        android:id="@+id/forget_Pass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/forget_string"

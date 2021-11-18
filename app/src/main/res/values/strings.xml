@@ -3,6 +3,7 @@
     <string name="text_search">Search</string>
     <string name="text_user">User or Email</string>
     <string name="text_password">Password</string>
+    <string name="conf_pass">Confirm your pass</string>
     <string name="forget_string">Forget Password</string>
     <string name="text_mobile">Mobile Num</string>
     <string name="log_btn">Login</string>
