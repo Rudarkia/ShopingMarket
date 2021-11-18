@@ -13,5 +13,6 @@
     <string name="home_appliances_category">Home Appliances</string>
     <string name="technology_category">Technology</string>
     <string name="tools_category">Tools</string>
+    <string name="noLogin">For a better experience remember to log in</string>
 
 </resources>

@@ -13,4 +13,5 @@
     <string name="home_appliances_category">Electrodomésticos</string>
     <string name="technology_category">Tecnología</string>
     <string name="tools_category">Herramientas</string>
+    <string name="noLogin">Para una mejor experiencia, recuerde iniciar sesión</string>
 </resources>
