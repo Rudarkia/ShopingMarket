@@ -6,11 +6,11 @@
         android:icon="@android:drawable/ic_menu_search"
         android:title="@string/action_search"
         app:showAsAction="always"/>
-
-    <item android:id="@+id/logout_btn"
+    <!--android:icon=""-->
+    <item android:id="@+id/login_btn"
         android:icon="@android:drawable/ic_menu_manage"
-        android:title="@string/action_log_out"
-        app:showAsAction="never"/>
+        android:title="@string/action_log"
+        app:showAsAction="always"/>
 
 
 </menu>
