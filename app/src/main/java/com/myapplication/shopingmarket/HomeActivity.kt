@@ -13,8 +13,7 @@ class HomeActivity : AppCompatActivity() {
         setTheme(R.style.Theme_ShopingMarket)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
-        val myToast = Toast.makeText(this, R.string.noLogin, Toast.LENGTH_LONG)
-        myToast.show()
+        showToast(1)
     }
 
     fun logOn(botonLogin: View) {
