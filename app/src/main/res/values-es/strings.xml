@@ -17,4 +17,10 @@
     <string name="action_search">xwxw</string>
     <string name="action_log">wdsd</string>
     <string name="action_log_out">dfg</string>
+    <string name="menu_recycle">Item title</string>
+    <string name="menu_details">Details</string>
+    <string name="menu_price">Price</string>
+    <string name="menu_title">Title</string>
+    <string name="category_title">Category Title</string>
+    <string name="category_details">Category details</string>
 </resources>

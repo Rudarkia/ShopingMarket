@@ -17,5 +17,12 @@
     <string name="action_search">Search</string>
     <string name="action_log">LogIn</string>
     <string name="action_log_out">LogOut</string>
+    <string name="menu_recycle">Item title</string>
+    <string name="menu_details">Details</string>
+    <string name="menu_price">Price</string>
+    <string name="menu_title">Title</string>
+    <string name="category_title">Category Title</string>
+    <string name="category_details">Category details</string>
+
 
 </resources>
