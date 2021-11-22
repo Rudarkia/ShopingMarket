@@ -63,7 +63,7 @@ class HomeActivity : AppCompatActivity() {
             true
         }
         R.id.login_btn ->{
-            val intent = Intent(this,HomeActivity::class.java)
+            val intent = Intent(this,LoginActivity::class.java)
             startActivity(intent)
             true
         }
