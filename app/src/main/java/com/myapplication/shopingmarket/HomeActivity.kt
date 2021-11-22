@@ -63,7 +63,7 @@ class HomeActivity : AppCompatActivity() {
             true
         }
         R.id.login_btn ->{
-            val intent = Intent(this,LoginActivity::class.java)
+            val intent = Intent(this,HomeActivity::class.java)
             startActivity(intent)
             true
         }
@@ -76,7 +76,7 @@ class HomeActivity : AppCompatActivity() {
     fun showToast(int: Int){
         when (int){
             1 ->Toast.makeText(applicationContext,R.string.noLogin,Toast.LENGTH_LONG).show()
-            2 ->Toast.makeText(applicationContext,"!Gracias pedaso de animal",Toast.LENGTH_LONG).show()
+            2 ->Toast.makeText(applicationContext,"!Gracias pedazo de animal",Toast.LENGTH_LONG).show()
 
         }
 
