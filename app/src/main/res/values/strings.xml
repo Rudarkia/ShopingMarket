@@ -23,6 +23,7 @@
     <string name="menu_title">Title</string>
     <string name="category_title">Category Title</string>
     <string name="category_details">Category details</string>
+    <string name="menu_ratings">ratings</string>
 
 
 </resources>
