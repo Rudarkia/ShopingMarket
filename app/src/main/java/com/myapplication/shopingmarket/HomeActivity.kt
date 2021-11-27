@@ -11,7 +11,7 @@ import androidx.viewpager2.widget.ViewPager2
 
 class HomeActivity : AppCompatActivity() {
 
-    private lateinit var viewPager2: ViewPager2
+    private var viewPager2: ViewPager2? = null
 
     private val introSliderAdapter = RecommendAdapter(
         listOf(
@@ -32,8 +32,10 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
         setSupportActionBar(findViewById(R.id.mainToolbar))
-        viewPager2 = findViewById(R.id.introSliderViewPager)
-        viewPager2.adapter = introSliderAdapter
+
+        viewPager2 = findViewById<ViewPager2>(R.id.introSliderViewPager)
+
+
 
 
         if (savedInstanceState == null){
