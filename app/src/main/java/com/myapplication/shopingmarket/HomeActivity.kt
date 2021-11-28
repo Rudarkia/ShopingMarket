@@ -1,42 +1,40 @@
 package com.myapplication.shopingmarket
 
+
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
+import androidx.recyclerview.widget.RecyclerView
+import androidx.viewpager2.widget.CompositePageTransformer
+import androidx.viewpager2.widget.MarginPageTransformer
 import androidx.viewpager2.widget.ViewPager2
-
+import kotlinx.android.synthetic.main.activity_home.*
+import kotlin.math.abs
 
 class HomeActivity : AppCompatActivity() {
 
-    private var viewPager2: ViewPager2? = null
-
-    private val introSliderAdapter = RecommendAdapter(
-        listOf(
-            IntroSlideR(R.mipmap.ic_launcher,"Recommended Item","4.4","$16 USD"),
-            IntroSlideR(R.mipmap.ic_launcher,"Recommended Item","4.5","$11 USD"),
-            IntroSlideR(R.mipmap.ic_launcher,"Recommended Item","4.3","$14 USD"),
-            IntroSlideR(R.mipmap.ic_launcher,"Recommended Item","4.1","$16 USD"),
-            IntroSlideR(R.mipmap.ic_launcher,"Recommended Item","4.4","$18 USD"),
-            IntroSlideR(R.mipmap.ic_launcher,"Recommended Item","4.2","$17 USD")
-        )
-    )
-
+    /*** Slider Recomment Var***/
+    private lateinit var sliderItemList: ArrayList<IntroSlideR>
+    private lateinit var recommendAdapter: RecommendAdapter
+    private lateinit var sliderHandler: Handler
+    private lateinit var sliderRun: Runnable
+    /*** Slider Recomment Var***/
 
     override fun onCreate(savedInstanceState: Bundle?) {
-
         Thread.sleep(2000)
         setTheme(R.style.Theme_ShopingMarket)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
+        //Tool bar
         setSupportActionBar(findViewById(R.id.mainToolbar))
-
-        viewPager2 = findViewById<ViewPager2>(R.id.introSliderViewPager)
-
-
-
+        ///Recommend Slider
+        sliderItems()
+        itemSliderView()
+        
 
         if (savedInstanceState == null){
             supportFragmentManager.beginTransaction()
@@ -47,9 +45,65 @@ class HomeActivity : AppCompatActivity() {
         }
     }
 
+    /***  Slider Recommend ***/
 
+    private fun sliderItems() {
+        sliderItemList = ArrayList()
+        recommendAdapter = RecommendAdapter(recommendSlider,sliderItemList)
+        recommendSlider.adapter=recommendAdapter
+        recommendSlider.clipToPadding=false
+        recommendSlider.clipChildren=false
+        recommendSlider.offscreenPageLimit=3
+        recommendSlider.getChildAt(0).overScrollMode=RecyclerView.OVER_SCROLL_NEVER
 
+        val comPosPageTarn = CompositePageTransformer()
+        comPosPageTarn.addTransformer(MarginPageTransformer(40))
+        comPosPageTarn.addTransformer { page,position ->
+            val r : Float = 1 - abs(position)
+            page.scaleY = 0.85f + r * 0.15f
+        }
+        recommendSlider.setPageTransformer(comPosPageTarn)
+        sliderHandler= Handler()
+        sliderRun = Runnable {
+            recommendSlider.currentItem = recommendSlider.currentItem + 1
+        }
+        recommendSlider.registerOnPageChangeCallback(
+            object : ViewPager2.OnPageChangeCallback(){
+                override fun onPageSelected(position: Int) {
+                    super.onPageSelected(position)
+                    sliderHandler.removeCallbacks(sliderRun)
+                    sliderHandler.postDelayed(sliderRun,2000)
+                }
+            }
+        )
 
+    }
+
+    override fun onPause() {
+        super.onPause()
+        sliderHandler.removeCallbacks(sliderRun)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        sliderHandler.postDelayed(sliderRun,2000)
+    }
+
+    //Add items
+    private fun itemSliderView() {
+        sliderItemList.add(IntroSlideR(R.mipmap.ic_launcher))
+        sliderItemList.add(IntroSlideR(R.mipmap.ic_launcher))
+        sliderItemList.add(IntroSlideR(R.mipmap.ic_launcher))
+        sliderItemList.add(IntroSlideR(R.mipmap.ic_launcher))
+        sliderItemList.add(IntroSlideR(R.mipmap.ic_launcher))
+        sliderItemList.add(IntroSlideR(R.mipmap.ic_launcher))
+        sliderItemList.add(IntroSlideR(R.mipmap.ic_launcher))
+        sliderItemList.add(IntroSlideR(R.mipmap.ic_launcher))
+
+    }
+    /***  Slider Recommend ***/
+
+    /***  Toolbar ***/
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.main_menu_no_log,menu)
         return super.onCreateOptionsMenu(menu)
