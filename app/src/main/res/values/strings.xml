@@ -24,6 +24,8 @@
     <string name="category_title">Category Title</string>
     <string name="category_details">Category details</string>
     <string name="menu_ratings">ratings</string>
+    <string name="recommendItems">Recommended articles</string>
+    <string name="categoryItems">List by categories</string>
 
 
 </resources>

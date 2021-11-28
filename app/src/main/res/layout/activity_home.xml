@@ -47,7 +47,12 @@
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:text="@string/recommendItems"
+                android:textSize="30sp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:textStyle="bold"/>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -63,22 +68,43 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:gravity="center">
+                android:layout_marginTop="5dp">
 
                 <TextView
+                    android:id="@+id/lastViews"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="ultimos vistos"
-                    android:textSize="20sp"/>
+                    android:text=""
+                    android:textSize="30sp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:textStyle="bold"/>
 
             </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/categoryItems"
+                android:textSize="30sp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:textStyle="bold"/>
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/product_fragment_view"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="500dp"
                 android:overScrollMode="never"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pie de pagina"/>
+            </LinearLayout>
 
         </LinearLayout>
 
