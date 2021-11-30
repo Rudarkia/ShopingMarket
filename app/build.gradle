@@ -3,6 +3,7 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-kapt' //Dependence Room
     id 'kotlin-android-extensions' //Dependence Android_Tools
+    id 'com.google.gms.google-services'//Google Service Plugin
 }
 
 android {
@@ -43,10 +44,16 @@ dependencies {
     implementation "androidx.room:room-runtime:$room_version"
     annotationProcessor "androidx.room:room-compiler:$room_version"
     implementation "androidx.room:room-ktx:2.3.0"
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.1")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.0")
 
     //View Scope
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0"
+
+    //Firebase
+    implementation platform('com.google.firebase:firebase-bom:29.0.0')
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation 'com.google.firebase:firebase-firestore-ktx'
+
 
     implementation fileTree(dir: "libs",include:["*.jar"])
     implementation 'androidx.recyclerview:recyclerview:1.2.1'

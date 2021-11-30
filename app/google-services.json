@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "355819456137",
+    "project_id": "test-udecaldas",
+    "storage_bucket": "test-udecaldas.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:355819456137:android:2d9faa9406b60a356d6858",
+        "android_client_info": {
+          "package_name": "com.myapplication.shopingmarket"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "355819456137-5d4q790aao5la9mimmpbbgtpnpe787ql.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCl-YTetfZcL0wPJyUhNo7XU3M4LX17W5w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "355819456137-5d4q790aao5la9mimmpbbgtpnpe787ql.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
