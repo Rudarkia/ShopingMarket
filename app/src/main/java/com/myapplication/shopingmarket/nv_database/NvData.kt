@@ -1,4 +1,4 @@
-package com.myapplication.shopingmarket
+package com.myapplication.shopingmarket.nv_database
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

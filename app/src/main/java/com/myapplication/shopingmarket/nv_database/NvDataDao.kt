@@ -1,4 +1,4 @@
-package com.myapplication.shopingmarket
+package com.myapplication.shopingmarket.nv_database
 
 import androidx.room.*
 
@@ -10,6 +10,9 @@ interface NvDataDao{
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insertRow(user: NvData): Long
+
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    suspend fun insertAllData(user: List<NvData>?): List<Long>
 
     @Update
     suspend fun undateRow(user: NvData)

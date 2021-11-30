@@ -11,18 +11,17 @@
         <entry key="..\:/Users/Cristian/AndroidStudioProjects/ShopingMarket/app/src/main/res/drawable/view_bg.xml" value="0.2203125" />
         <entry key="..\:/Users/Cristian/AndroidStudioProjects/ShopingMarket/app/src/main/res/drawable/welcome_splash.xml" value="0.15462962962962962" />
         <entry key="..\:/Users/Cristian/AndroidStudioProjects/ShopingMarket/app/src/main/res/layout-land/activity_home.xml" value="0.1728395061728395" />
-        <entry key="..\:/Users/Cristian/AndroidStudioProjects/ShopingMarket/app/src/main/res/layout/activity_home.xml" value="0.33" />
+        <entry key="..\:/Users/Cristian/AndroidStudioProjects/ShopingMarket/app/src/main/res/layout/activity_home.xml" value="0.15" />
         <entry key="..\:/Users/Cristian/AndroidStudioProjects/ShopingMarket/app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="..\:/Users/Cristian/AndroidStudioProjects/ShopingMarket/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/Cristian/AndroidStudioProjects/ShopingMarket/app/src/main/res/layout/fragment_category.xml" value="0.22" />
+        <entry key="..\:/Users/Cristian/AndroidStudioProjects/ShopingMarket/app/src/main/res/layout/fragment_category.xml" value="0.1" />
         <entry key="..\:/Users/Cristian/AndroidStudioProjects/ShopingMarket/app/src/main/res/layout/fragment_recommend.xml" value="0.1621376811594203" />
         <entry key="..\:/Users/Cristian/AndroidStudioProjects/ShopingMarket/app/src/main/res/layout/home_category_item_recycle.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Cristian/AndroidStudioProjects/ShopingMarket/app/src/main/res/layout/home_item_recycle.xml" value="0.25" />
-        <entry key="..\:/Users/Cristian/AndroidStudioProjects/ShopingMarket/app/src/main/res/layout/item_recommend.xml" value="0.1" />
+        <entry key="..\:/Users/Cristian/AndroidStudioProjects/ShopingMarket/app/src/main/res/layout/item_recommend.xml" value="0.15443840579710144" />
         <entry key="..\:/Users/Cristian/AndroidStudioProjects/ShopingMarket/app/src/main/res/layout/item_recommended.xml" value="0.1" />
         <entry key="..\:/Users/Cristian/AndroidStudioProjects/ShopingMarket/app/src/main/res/layout/login_dialog.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Cristian/AndroidStudioProjects/ShopingMarket/app/src/main/res/layout/login_tab_fragment.xml" value="0.33" />
-        <entry key="..\:/Users/Cristian/AndroidStudioProjects/ShopingMarket/app/src/main/res/layout/recommend_item_recycle.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Cristian/AndroidStudioProjects/ShopingMarket/app/src/main/res/layout/recycle_item_home.xml" value="0.1" />
         <entry key="..\:/Users/Cristian/AndroidStudioProjects/ShopingMarket/app/src/main/res/layout/signup_tab_fragment.xml" value="0.25" />
         <entry key="..\:/Users/Cristian/AndroidStudioProjects/ShopingMarket/app/src/main/res/layout/singup_tab_fragment.xml" value="0.18885869565217392" />

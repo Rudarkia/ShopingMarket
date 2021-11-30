@@ -1,4 +1,4 @@
-package com.myapplication.shopingmarket
+package com.myapplication.shopingmarket.nv_database
 
 import android.content.Context
 import androidx.room.Database
@@ -18,7 +18,7 @@ abstract class NvDatabase : RoomDatabase(){
             return INSTANCE ?: synchronized(this) {
                 val instance = Room.databaseBuilder(context.applicationContext,
                     NvDatabase::class.java,"NvDatabase").build()
-                INSTANCE=instance
+                INSTANCE =instance
                 // return instance
                 instance
             }
