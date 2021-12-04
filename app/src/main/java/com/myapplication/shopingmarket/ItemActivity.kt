@@ -16,7 +16,7 @@ class ItemActivity : AppCompatActivity(){
         setContentView(R.layout.activity_item)
 
 //        product= ProductEntity(intent.getStringExtra("Product").toString(),"yhtdf",false,"wew","we","wewer",(10).toDouble(),(2).toDouble(),"none")
-//        Toast.makeText(applicationContext,intent.getStringExtra("Product"),Toast.LENGTH_LONG).show()  //OnlyTest
+        Toast.makeText(applicationContext,intent.getStringExtra("Product"),Toast.LENGTH_LONG).show()  //OnlyTest
 
         createImage()
     }
