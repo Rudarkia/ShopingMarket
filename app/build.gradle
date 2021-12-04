@@ -51,8 +51,15 @@ dependencies {
 
     //Firebase
     implementation platform('com.google.firebase:firebase-bom:29.0.0')
-    implementation 'com.google.firebase:firebase-analytics-ktx'
-    implementation 'com.google.firebase:firebase-firestore-ktx'
+    implementation 'com.google.firebase:firebase-analytics-ktx' // Google Analytics
+    implementation 'com.google.firebase:firebase-firestore-ktx' // Data Base
+    implementation 'com.google.firebase:firebase-storage-ktx'//Storage firebase
+    implementation 'com.google.firebase:firebase-auth-ktx'// Firebase Auth
+    implementation 'com.google.android.gms:play-services-auth:19.2.0'
+    //Firebase
+
+    //picasso
+    implementation 'com.squareup.picasso:picasso:2.71828'
 
 
     implementation fileTree(dir: "libs",include:["*.jar"])
@@ -63,7 +70,6 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
-    //androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     // ViewPager2
     implementation "androidx.viewpager2:viewpager2:1.0.0"

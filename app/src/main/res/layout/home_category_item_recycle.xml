@@ -49,6 +49,17 @@
             android:layout_below="@id/category_item_title"
             android:textSize="20sp"/>
 
+        <TextView
+            android:id="@+id/category_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/category_item_details"
+            android:layout_toEndOf="@id/category_item_image"
+            android:layout_toRightOf="@+id/category_item_image"
+            android:text="@string/id"
+            android:textColor="@color/color_bg"
+            android:textSize="20sp" />
+
 
     </RelativeLayout>
 

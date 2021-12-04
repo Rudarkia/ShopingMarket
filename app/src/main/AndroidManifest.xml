@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.myapplication.shopingmarket">
 
+    <uses-permission android:name="android.permission.INTERNET"/> // Facebook and picasso
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -22,6 +23,10 @@
         </activity>
 
         <activity android:name=".LoginActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+        </activity>
+
+        <activity android:name=".ItemActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar">
         </activity>
 

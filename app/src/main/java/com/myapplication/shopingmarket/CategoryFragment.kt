@@ -7,11 +7,15 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.firestore.FirebaseFirestore
+
 
 class CategoryFragment : Fragment() {
 
+    private  var firestoreDb = FirebaseFirestore.getInstance()
     private lateinit var listCategoryRecyclerView: RecyclerView
     private lateinit var categoryAdapter: RecyclerView.Adapter<CategoryListAdapter.CategoryViewHolder>
+    var obList: MutableList<CategoryEntity> = mutableListOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,35 +27,34 @@ class CategoryFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        val fragment: View = inflater.inflate(R.layout.fragment_category,container,false)
-
-        return fragment
+        return inflater.inflate(R.layout.fragment_list,container,false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        var itemImage: ArrayList<Int> = ArrayList()
-        var itemMeTitles: ArrayList<String> = ArrayList()
-        var itemDesc: ArrayList<String> = ArrayList()
-
-
-        for (i in 1..5) {
-            itemImage.add(R.drawable.ic_launcher_background)
-            itemMeTitles.add(resources.getString(R.string.category_title))
-            itemDesc.add(resources.getString(R.string.category_details))
+        obList.clear()
+        firestoreDb.collection("categories").get().addOnSuccessListener { documents ->
+            for (document in documents) {
+                obList.add(
+                    CategoryEntity(
+                        document.id,
+                        document.get("image").toString(),
+                        document.get("title_en").toString(),
+                        document.get("title_es").toString(),
+                        document.get("description").toString()
+                    )
+                )
+            }
+            categoryAdapter.notifyDataSetChanged()
         }
 
-        var obList: Bundle = Bundle()
-        obList.putIntegerArrayList("images",itemImage)
-        obList.putStringArrayList("titles",itemMeTitles)
-        obList.putStringArrayList("details",itemDesc)
+        listCategoryRecyclerView = requireView().findViewById(R.id.item_view)
+        categoryAdapter = CategoryListAdapter(activity as AppCompatActivity, obList)
 
-        listCategoryRecyclerView = requireView().findViewById<RecyclerView>(R.id.category_view)
-        categoryAdapter = CategoryListAdapter(activity as AppCompatActivity,obList)
+        listCategoryRecyclerView.setHasFixedSize(true)
 
-        listCategoryRecyclerView.setHasFixedSize(false)
-        listCategoryRecyclerView.adapter=categoryAdapter
+        listCategoryRecyclerView.adapter = categoryAdapter
         //listCategoryRecyclerView.addItemDecoration(DividerItemDecoration(context,DividerItemDecoration.VERTICAL))
     }
 }

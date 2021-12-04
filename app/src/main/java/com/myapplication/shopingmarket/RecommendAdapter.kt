@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 
-class RecommendAdapter (val viewPager : ViewPager2,val sliderList : ArrayList<IntroSlideR>) :
+class RecommendAdapter (private val viewPager : ViewPager2, private val sliderList : ArrayList<IntroSlideR>) :
     RecyclerView.Adapter<RecommendAdapter.SliderViewHolder>() {
 
     inner class SliderViewHolder(var view : View) : RecyclerView.ViewHolder(view){

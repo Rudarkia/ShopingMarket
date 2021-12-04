@@ -12,36 +12,43 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.MarginPageTransformer
 import androidx.viewpager2.widget.ViewPager2
+import com.google.firebase.analytics.FirebaseAnalytics
 import kotlinx.android.synthetic.main.activity_home.*
 import kotlin.math.abs
 
 class HomeActivity : AppCompatActivity() {
 
-    /*** Slider Recomment Var***/
+    /*** Slider Recommend Var***/
     private lateinit var sliderItemList: ArrayList<IntroSlideR>
     private lateinit var recommendAdapter: RecommendAdapter
     private lateinit var sliderHandler: Handler
     private lateinit var sliderRun: Runnable
-    /*** Slider Recomment Var***/
+    /*** Slider Recommend Var***/
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        //Splash
         Thread.sleep(2000)
         setTheme(R.style.Theme_ShopingMarket)
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
+        val analiyticBundle = Bundle()
+        val analytics: FirebaseAnalytics = FirebaseAnalytics.getInstance(this)
+        analiyticBundle.putString("message","HomeActivity")
+        analytics.logEvent("InitScreen",analiyticBundle)
         //Tool bar
         setSupportActionBar(findViewById(R.id.mainToolbar))
         ///Recommend Slider
         sliderItems()
         itemSliderView()
-        
+
+        showToast(1)
 
         if (savedInstanceState == null){
             supportFragmentManager.beginTransaction()
                 .setReorderingAllowed(true)
                 .add(R.id.product_fragment_view, CategoryFragment::class.java,null,"TagFragmentCategory")
                 .commit()
-            showToast(1)
         }
     }
 

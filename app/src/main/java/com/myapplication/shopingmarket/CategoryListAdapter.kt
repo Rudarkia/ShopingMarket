@@ -6,41 +6,50 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
+import com.squareup.picasso.Picasso
 
 class CategoryListAdapter(context: AppCompatActivity,
-                          info:Bundle) : RecyclerView.Adapter<CategoryListAdapter.CategoryViewHolder>() {
-    class CategoryViewHolder(val layout: View):RecyclerView.ViewHolder(layout)
+                          private val dataSet: MutableList<CategoryEntity>) : RecyclerView.Adapter<CategoryListAdapter.CategoryViewHolder>() {
 
     private val context: AppCompatActivity=context
 
-    var itemImage: ArrayList<Int> = info.getIntegerArrayList("images") as ArrayList<Int>
-    var itemTitle: ArrayList<String> = info.getStringArrayList("titles") as ArrayList<String>
-    var itemDetails: ArrayList<String> = info.getStringArrayList("details") as ArrayList<String>
+    class CategoryViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
+
+        val imgViewImage = itemView.findViewById<ImageView>(R.id.category_item_image)
+        val texViewTitle = itemView.findViewById<TextView>(R.id.category_item_title)
+        val textViewDetails = itemView.findViewById<TextView>(R.id.category_item_details)
+        val textId = itemView.findViewById<TextView>(R.id.category_id)
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CategoryViewHolder {
-        val layout = LayoutInflater.from(parent.context).inflate(R.layout.home_category_item_recycle,parent,false)
-        return CategoryViewHolder(layout)
+
+        return CategoryViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.home_category_item_recycle,parent,false))
     }
 
     override fun onBindViewHolder(holder: CategoryViewHolder, position: Int) {
 
-        var imgViewImage = holder.layout.findViewById<ImageView>(R.id.category_item_image)
-        imgViewImage.setImageResource(itemImage[position])
+        Picasso.get().load(dataSet[position].image).into(holder.imgViewImage) //picasso image tool
+        holder.texViewTitle.text = dataSet[position].title_en
+        holder.textViewDetails.text = dataSet[position].description
+        holder.textId.text = "ID: "+dataSet[position].id //OnlyTest
+        holder.textId.visibility = View.INVISIBLE
 
-        var texViewTitle = holder.layout.findViewById<TextView>(R.id.category_item_title)
-        texViewTitle.text = itemTitle[position]
+        val data = Bundle()
+        data.putString("id",dataSet[position].id)
 
-        var  textViewDetails = holder.layout.findViewById<TextView>(R.id.category_item_details)
-        textViewDetails.text = itemDetails[position]
-
-        holder.layout.setOnClickListener{
-
+        holder.itemView.setOnClickListener{
+//            Toast.makeText(holder.itemView.context,dataSet[position].id,Toast.LENGTH_LONG).show()  //OnlyTest
+            context.supportFragmentManager.beginTransaction()
+                .setReorderingAllowed(true)
+                .replace(R.id.product_fragment_view,ProductFragment::class.java,data,"productList")
+                .addToBackStack("TagFragmentCategory")
+                .commit()
         }
+
     }
 
-    override fun getItemCount(): Int {
-        return itemTitle.size
-    }
+    override fun getItemCount() = dataSet.size
 }

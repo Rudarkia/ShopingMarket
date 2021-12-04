@@ -26,6 +26,10 @@
     <string name="menu_ratings">ratings</string>
     <string name="recommendItems">Recommended articles</string>
     <string name="categoryItems">List by categories</string>
+    <string name="id">Id</string>
+    <string name="itemTitle">Title</string>
+    <string name="add_car_btn">Add to Cart</string>
+    <string name="proImage">Product Images</string>
 
 
 </resources>
