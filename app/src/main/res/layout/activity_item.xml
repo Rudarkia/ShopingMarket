@@ -27,8 +27,8 @@
                 android:id="@+id/item_slider"
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
-                android:paddingStart="80dp"
-                android:paddingEnd="80dp" />
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp" />
             <LinearLayout
                 android:id="@+id/dots_container"
                 android:layout_width="match_parent"
