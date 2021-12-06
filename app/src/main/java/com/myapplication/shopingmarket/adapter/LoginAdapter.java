@@ -1,10 +1,13 @@
-package com.myapplication.shopingmarket;
+package com.myapplication.shopingmarket.adapter;
 
 import android.content.Context;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
+
+import com.myapplication.shopingmarket.LoginTabFragment;
+import com.myapplication.shopingmarket.SignupTabFragment;
 
 public class LoginAdapter extends FragmentPagerAdapter {
     private Context context;

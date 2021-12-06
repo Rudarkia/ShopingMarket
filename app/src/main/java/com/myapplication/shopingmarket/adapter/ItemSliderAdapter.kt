@@ -1,10 +1,11 @@
-package com.myapplication.shopingmarket
+package com.myapplication.shopingmarket.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
+import com.myapplication.shopingmarket.R
 import com.squareup.picasso.Picasso
 
 class ItemSliderAdapter(private val imageList: ArrayList<String>) : RecyclerView.Adapter<ItemSliderAdapter.SliderViewHolder>() {

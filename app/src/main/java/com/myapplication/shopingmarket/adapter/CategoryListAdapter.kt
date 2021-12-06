@@ -1,4 +1,4 @@
-package com.myapplication.shopingmarket
+package com.myapplication.shopingmarket.adapter
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,9 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
+import com.myapplication.shopingmarket.ProductFragment
+import com.myapplication.shopingmarket.R
 import com.squareup.picasso.Picasso
 
 class CategoryListAdapter(context: AppCompatActivity,
@@ -44,7 +45,7 @@ class CategoryListAdapter(context: AppCompatActivity,
 //            Toast.makeText(holder.itemView.context,dataSet[position].id,Toast.LENGTH_LONG).show()  //OnlyTest
             context.supportFragmentManager.beginTransaction()
                 .setReorderingAllowed(true)
-                .replace(R.id.product_fragment_view,ProductFragment::class.java,data,"productList")
+                .replace(R.id.product_fragment_view, ProductFragment::class.java,data,"productList")
                 .addToBackStack("TagFragmentCategory")
                 .commit()
         }

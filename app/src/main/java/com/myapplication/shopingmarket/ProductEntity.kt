@@ -8,6 +8,8 @@ class ProductEntity internal constructor(
     val title_en: String,
     val title_es: String,
     val price: Double,
+    val maxQ: Double,
+    val stock: Double,
     val score: Double,
     val description: String
 )

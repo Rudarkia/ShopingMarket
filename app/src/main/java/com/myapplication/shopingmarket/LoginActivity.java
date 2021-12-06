@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
+import com.myapplication.shopingmarket.adapter.LoginAdapter;
 
 public class LoginActivity extends AppCompatActivity {
 

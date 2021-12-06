@@ -1,4 +1,4 @@
-package com.myapplication.shopingmarket
+package com.myapplication.shopingmarket.adapter
 
 import android.content.Intent
 import android.view.LayoutInflater
@@ -6,9 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
+import com.myapplication.shopingmarket.ItemActivity
+import com.myapplication.shopingmarket.ProductEntity
+import com.myapplication.shopingmarket.R
 import com.squareup.picasso.Picasso
 
 class ProductListAdapter (

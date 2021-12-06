@@ -4,11 +4,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.FirebaseFirestore
+import com.myapplication.shopingmarket.adapter.ProductListAdapter
 
 class ProductFragment : Fragment() {
 
@@ -51,6 +51,8 @@ class ProductFragment : Fragment() {
                         document.get("title_en").toString(),
                         document.get("title_es").toString(),
                         document.get("price").toString().toDouble(),
+                        document.get("max_quantity").toString().toDouble(),
+                        document.get("stock").toString().toDouble(),
                         document.get("current_score").toString().toDouble(),
                         document.get("description").toString()
                     )

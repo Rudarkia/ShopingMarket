@@ -1,4 +1,4 @@
-package com.myapplication.shopingmarket
+package com.myapplication.shopingmarket.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,6 +7,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
+import com.myapplication.shopingmarket.R
+import com.myapplication.shopingmarket.dataModel.IntroSlideR
 
 class RecommendAdapter (private val viewPager : ViewPager2, private val sliderList : ArrayList<IntroSlideR>) :
     RecyclerView.Adapter<RecommendAdapter.SliderViewHolder>() {

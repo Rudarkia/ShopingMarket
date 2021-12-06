@@ -1,4 +1,4 @@
-package com.myapplication.shopingmarket
+package com.myapplication.shopingmarket.adapter
 
 class CategoryEntity internal constructor(
     val id: String,

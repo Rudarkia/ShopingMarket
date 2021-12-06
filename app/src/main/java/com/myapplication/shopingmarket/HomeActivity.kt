@@ -13,6 +13,8 @@ import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.MarginPageTransformer
 import androidx.viewpager2.widget.ViewPager2
 import com.google.firebase.analytics.FirebaseAnalytics
+import com.myapplication.shopingmarket.adapter.RecommendAdapter
+import com.myapplication.shopingmarket.dataModel.IntroSlideR
 import kotlinx.android.synthetic.main.activity_home.*
 import kotlin.math.abs
 
