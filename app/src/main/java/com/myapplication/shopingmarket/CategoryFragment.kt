@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.FirebaseFirestore
-import com.myapplication.shopingmarket.adapter.CategoryEntity
+import com.myapplication.shopingmarket.dataModel.CategoryEntity
 import com.myapplication.shopingmarket.adapter.CategoryListAdapter
 
 

@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.myapplication.shopingmarket.ProductFragment
 import com.myapplication.shopingmarket.R
+import com.myapplication.shopingmarket.dataModel.CategoryEntity
 import com.squareup.picasso.Picasso
 
 class CategoryListAdapter(context: AppCompatActivity,

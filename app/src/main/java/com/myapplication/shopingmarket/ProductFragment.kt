@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.FirebaseFirestore
 import com.myapplication.shopingmarket.adapter.ProductListAdapter
+import com.myapplication.shopingmarket.dataModel.ProductEntity
 
 class ProductFragment : Fragment() {
 

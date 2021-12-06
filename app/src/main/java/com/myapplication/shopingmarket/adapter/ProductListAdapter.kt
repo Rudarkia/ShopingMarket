@@ -9,7 +9,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.myapplication.shopingmarket.ItemActivity
-import com.myapplication.shopingmarket.ProductEntity
+import com.myapplication.shopingmarket.dataModel.ProductEntity
 import com.myapplication.shopingmarket.R
 import com.squareup.picasso.Picasso
 

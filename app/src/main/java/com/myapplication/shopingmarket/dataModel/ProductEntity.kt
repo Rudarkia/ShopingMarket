@@ -1,4 +1,4 @@
-package com.myapplication.shopingmarket
+package com.myapplication.shopingmarket.dataModel
 
 class ProductEntity internal constructor(
     val id: String,
