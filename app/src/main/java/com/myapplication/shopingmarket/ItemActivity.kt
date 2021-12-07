@@ -2,6 +2,7 @@ package com.myapplication.shopingmarket
 
 import android.os.Bundle
 import android.util.Log
+import android.widget.RatingBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.snackbar.Snackbar
@@ -24,6 +25,7 @@ class ItemActivity : AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_item)
+//        ratingBar.setIsIndicator(true)
         itemId = intent.getStringExtra("Product").toString()
         itemData = ItemData()
         itemInfo = ItemInfo()
@@ -39,13 +41,15 @@ class ItemActivity : AppCompatActivity(){
             if (it != null) {
                 itemData = it.toObject<ItemData>()
                 itemData!!.id =it.id
-//                Log.d("Query", "Data0 ${it.data}")
+                Log.d("Query", "Data0 ${it.data}")
                 item_activity_title.text = itemData!!.title_en
+                ratingBar.rating = itemData!!.current_score!!.toFloat()
+                score.text = itemData!!.current_score!!.toString()
             }else{
-                Log.d("Query", "No Data0")
+//                Log.d("Query", "No Data0")
             }
         }.addOnFailureListener {
-            Log.d("Query", "Error Data0",it)
+//            Log.d("Query", "Error Data0",it)
         }
 
         dB.collection("product").document(string).collection("Long_description").document(string).get()
@@ -57,6 +61,7 @@ class ItemActivity : AppCompatActivity(){
                         for (i in v.indices){
                             images.add(v[i])
 //                            Log.d("Query", "image source: ${v[i]}")
+                            brand.text = "Brand: "+itemInfo!!.trademark
                         }
                     }
 
