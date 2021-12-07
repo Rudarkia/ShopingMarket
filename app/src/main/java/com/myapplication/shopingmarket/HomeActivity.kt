@@ -108,7 +108,6 @@ class HomeActivity : AppCompatActivity() {
         sliderItemList.add(IntroSlideR(R.mipmap.ic_launcher))
         sliderItemList.add(IntroSlideR(R.mipmap.ic_launcher))
         sliderItemList.add(IntroSlideR(R.mipmap.ic_launcher))
-
     }
     /***  Slider Recommend ***/
 

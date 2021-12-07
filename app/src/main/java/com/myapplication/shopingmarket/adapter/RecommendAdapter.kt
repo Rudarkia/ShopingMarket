@@ -38,7 +38,7 @@ class RecommendAdapter (private val viewPager : ViewPager2, private val sliderLi
     }
     private val run = Runnable {
         sliderList.addAll(sliderList)
-        notifyDataSetChanged()
+
     }
 
     override fun getItemCount(): Int = sliderList.size
