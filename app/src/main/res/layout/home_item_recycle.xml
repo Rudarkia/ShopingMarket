@@ -34,7 +34,7 @@
             android:layout_toEndOf="@id/item_image"
             android:layout_toRightOf="@+id/item_image"
             android:layout_alignParentTop="true"
-            android:textSize="25sp"/>
+            android:textSize="24sp"/>
 
         <TextView
             android:id="@+id/item_price"
@@ -57,19 +57,27 @@
             android:layout_toRightOf="@+id/item_image"
             android:text="@string/menu_details"
             android:textColor="@color/cardview_dark_background"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/product_id"
+        <RatingBar
+            android:id="@+id/rating_product"
+            style="?android:attr/ratingBarStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/item_details"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="80dp"
             android:layout_toEndOf="@+id/item_image"
             android:layout_toRightOf="@+id/item_image"
-            android:text="@string/id"
-            android:textColor="@color/color_bg"
-            android:textSize="20sp" />
+            android:isIndicator="true"
+            android:numStars="5"
+            android:progressTint="@color/color_bg"
+            android:scaleX="1.8"
+            android:scaleY="1.8"
+            android:secondaryProgressTint="@color/bt_color_1"
+            android:stepSize="0.1" />
 
 
     </RelativeLayout>

@@ -32,5 +32,9 @@
     <string name="proImage">Product Images</string>
     <string name="prefKey">com.myapplication.shopingmarket.PREFERENCE_FILE_KEY</string>
     <string name="tempKey" translatable="false">com.myapplication.shopingmarket.TEMP_FILE_KEY</string>
+    <string name="Purchase_details">Purchase details</string>
+    <string name="quantity">Quantity</string>
+    <string name="total_price">Total price</string>
+    <string name="currency">US</string>
 
 </resources>

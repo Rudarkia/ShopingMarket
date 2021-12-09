@@ -23,7 +23,7 @@ class ProductListAdapter (
         val texViewTitle = layoutView.findViewById<TextView>(R.id.item_title)
         val textViewPrice = layoutView.findViewById<TextView>(R.id.item_price)
         val textViewDetails = layoutView.findViewById<TextView>(R.id.item_details)
-        val textId = layoutView.findViewById<TextView>(R.id.product_id)
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductViewHolder {
@@ -37,11 +37,8 @@ class ProductListAdapter (
         holder.texViewTitle.text = dataSet[position].title_en
         holder.textViewPrice.text = dataSet[position].price.toString()
         holder.textViewDetails.text = dataSet[position].description
-        holder.textId.text = "ID: " + dataSet[position].id //OnlyTest
 
         holder.itemView.setOnClickListener{
-//            Toast.makeText(holder.itemView.context,dataSet[position].category,Toast.LENGTH_LONG).show()  //OnlyTest
-//            Toast.makeText(holder.itemView.context,dataSet[position].id,Toast.LENGTH_LONG).show()  //OnlyTest
             context.let{
                 val intent = Intent (it, ItemActivity::class.java)
                 intent.putExtra("Product",dataSet[position].id)
